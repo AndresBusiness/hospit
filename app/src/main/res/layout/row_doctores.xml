@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:de.hdodenhof="http://schemas.android.com/tools"
+android:orientation="horizontal"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:paddingTop="2dp"
+android:paddingBottom="2dp"
+android:id="@+id/row_doctores">
+
+
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:id="@+id/idCardDoctores"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/idImgDoctor"
+            android:layout_width="87dp"
+            android:layout_height="90dp"
+            android:layout_margin="10dp"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/CELESTE"
+            app:srcCompat="@drawable/doctor7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/idNombreDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:text="lblNombreDoctor"  />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/idEspecialidad"
+                    android:layout_width="158dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/NEGRO"
+                    android:layout_height="match_parent"
+                    android:text="lblEspecialidad" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        style="@style/Widget.AppCompat.ImageButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:src="@android:drawable/btn_star_big_on" />
+                    <TextView
+                        android:id="@+id/idNumeroReputacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="lbl23"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+</LinearLayout>

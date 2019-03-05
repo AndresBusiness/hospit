@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ce.masterweb.udls.org.menuprueba.MainActivity">
+    <item
+        android:id="@+id/idVerEspecialistas"
+        android:orderInCategory="100"
+        android:title="Ver Doctores"
+        android:icon="@mipmap/ic_especialidades"
+        app:itemIconTint="@color/BLANCO"
+        app:showAsAction="ifRoom|withText"/>
+</menu>

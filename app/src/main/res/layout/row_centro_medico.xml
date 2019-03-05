@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:de.hdodenhof="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:id="@+id/row_centro_medico">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/idCard"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/idImgCentroMedico"
+                android:layout_width="87dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/CELESTE"
+                app:srcCompat="@drawable/img7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/idNombreCentroMedico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#3F51B5"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="lblNombreCentroMedico"  />
+                <TextView
+                    android:id="@+id/idDireccion"
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:textColor="@color/NEGRO"
+                    android:layout_height="wrap_content"
+                    android:text="lblDireccion" />
+                <TextView
+                    android:id="@+id/idTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/NEGRO"
+                    android:textSize="16dp"
+                    android:text="lblTelefono" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

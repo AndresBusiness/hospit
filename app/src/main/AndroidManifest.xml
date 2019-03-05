@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.udls.masterweb.ce">
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.javapapers.currentlocationinmap.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ClinicApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".seg.LoginActivity"
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gui.MainActivity"
+            android:colorMode="default"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gui.components.CentrosMedicos.DetalleCentroMedico"
+            android:label="Detalle de la Clinica"
+            android:parentActivityName=".gui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gui.components.CentrosMedicos.ContenedorMapa"
+            android:label="Ubicación de la Clinica"
+            android:parentActivityName=".gui.components.CentrosMedicos.DetalleCentroMedico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.components.CentrosMedicos.DetalleCentroMedico" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDgKC4JFRBvMbhNlmmd3Y5ZH8caJTJCaJk" />
+
+        <activity
+            android:name=".gui.components.CentrosMedicos.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".gui.components.Doctores.MainDoctores"
+            android:label="Doctores Profesionales"
+            android:parentActivityName=".gui.components.CentrosMedicos.DetalleCentroMedico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".gui.components.CentrosMedicos.DetalleCentroMedico" />
+        </activity>
+        <activity
+            android:name=".gui.components.Doctores.DetalleDoctor"
+            android:label="Perfil Médico" />
+        <activity
+            android:name=".seg.Registro"
+            android:label="¡Únete!" />
+        <activity android:name=".seg.Perfil"
+            android:label="Perfil de Usuario"></activity>
+    </application>
+
+</manifest>
